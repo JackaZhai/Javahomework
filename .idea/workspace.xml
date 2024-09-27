@@ -62,6 +62,11 @@
     "应用程序.Triangle.executor": "Run"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\JackZhai\IdeaProjects\Javahomework\src" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Phone" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Phone" />
