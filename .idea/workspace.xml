@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b2b6ddc-eb94-45b0-ad4d-59f04206c1ca" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javahomework.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Phone.java" afterDir="false" />
-    </list>
+    <list default="true" id="7b2b6ddc-eb94-45b0-ad4d-59f04206c1ca" name="更改" comment="完成大概的" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,12 +19,24 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JackaZhai/Javahomework.git&quot;,
+    &quot;accountId&quot;: &quot;b2445982-8a4c-465d-8e59-50f4e901bd89&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2mFETvOBbe9VNtXLcGqncwzPrAH" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -43,14 +47,19 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/JackZhai/IdeaProjects/Javahomework/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/JackZhai/IdeaProjects/Javahomework/src/Main.java",
+    "settings.editor.selected.configurable": "cn.yiiguxing.plugin.translate",
     "vue.rearranger.settings.migration": "true",
-    "应用程序.Phone.executor": "Run"
+    "应用程序.Main.executor": "Run",
+    "应用程序.MyCalendar.executor": "Run",
+    "应用程序.Phone.executor": "Run",
+    "应用程序.Triangle.executor": "Run"
   }
 }]]></component>
   <component name="RunManager">
@@ -70,8 +79,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
       </set>
     </attachedChunks>
   </component>
@@ -83,11 +92,102 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1726663937564</updated>
-      <workItem from="1726663938654" duration="1181000" />
+      <workItem from="1726663938654" duration="1953000" />
+      <workItem from="1726721635535" duration="397000" />
+      <workItem from="1726722042014" duration="9000" />
+      <workItem from="1726722304262" duration="964000" />
+      <workItem from="1726733366089" duration="402000" />
+      <workItem from="1726733957569" duration="1831000" />
+      <workItem from="1727064824636" duration="76000" />
+      <workItem from="1727064907742" duration="141000" />
+      <workItem from="1727065108493" duration="8000" />
+      <workItem from="1727086764424" duration="191000" />
+      <workItem from="1727185147243" duration="614000" />
+      <workItem from="1727262771511" duration="360000" />
+      <workItem from="1727439713116" duration="2111000" />
     </task>
+    <task id="LOCAL-00001" summary="创建">
+      <option name="closed" value="true" />
+      <created>1726665264591</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1726665264591</updated>
+    </task>
+    <task id="LOCAL-00002" summary="创建">
+      <option name="closed" value="true" />
+      <created>1726722655768</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1726722655768</updated>
+    </task>
+    <task id="LOCAL-00003" summary="创建HONEWORK">
+      <option name="closed" value="true" />
+      <created>1726722979967</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1726722979967</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update by ai">
+      <option name="closed" value="true" />
+      <created>1726735812707</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1726735812707</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update by ai">
+      <option name="closed" value="true" />
+      <created>1727086812436</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1727086812436</updated>
+    </task>
+    <task id="LOCAL-00006" summary="完成大概的">
+      <option name="closed" value="true" />
+      <created>1727442468413</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1727442468413</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="创建" />
+    <MESSAGE value="创建HONEWORK" />
+    <MESSAGE value="update by ai" />
+    <MESSAGE value="完成大概的" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成大概的" />
   </component>
 </project>
