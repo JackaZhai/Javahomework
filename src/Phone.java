@@ -60,7 +60,6 @@ public class Phone {
     }
 
     // 重写toString方法
-    @Override
     public String toString() {
         return "---编号为" + serialNumber + "的手机参数--\n" +
                "品牌：" + brand + "\n" +
@@ -72,8 +71,4 @@ public class Phone {
                "--------------------------------------";
     }
 
-    public static void main(String[] args) {
-        Phone phone = new Phone();
-        System.out.println(phone);
-    }
 }

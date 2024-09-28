@@ -12,41 +12,40 @@
 import java.util.Scanner;
 
 public class Triangle {
-    private double sideA;
-    private double sideB;
-    private double sideC;
+    private double A;
+    private double B;
+    private double C;
 
-    // No-argument constructor
     public Triangle() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("输入边长A：");
-        this.sideA = scanner.nextDouble();
+        this.A = scanner.nextDouble();
         System.out.print("输入边长B：");
-        this.sideB = scanner.nextDouble();
+        this.B = scanner.nextDouble();
         System.out.print("输入边长C：");
-        this.sideC = scanner.nextDouble();
+        this.C = scanner.nextDouble();
 
-        if (!isValidTriangle()) {
+        if (!goodTriangle()) {
             throw new IllegalArgumentException("输入的边长不能构成三角形");
         }
     }
 
-    // Method to check if the sides form a valid triangle
-    private boolean isValidTriangle() {
-        return (sideA + sideB > sideC) && (sideA + sideC > sideB) && (sideB + sideC > sideA);
+    //判断是不是正常的三角形
+    private boolean goodTriangle() {
+        return (A + B > C) && (A + C > B) && (B + C > A);
     }
 
-    // Method to calculate the area of the triangle using Heron's formula
-    private double calculateArea() {
-        double s = (sideA + sideB + sideC) / 2;
-        return Math.sqrt(s * (s - sideA) * (s - sideB) * (s - sideC));
+
+    //计算面积，使用海伦公式
+    private double calculateMianji() {
+        double s = (A + B + C) / 2;
+        return Math.sqrt(s * (s - A) * (s - B) * (s - C));
     }
 
-    // Method to determine the type of the triangle
     private String getTriangleType() {
-        if (sideA == sideB && sideB == sideC) {
+        if (A == B && B == C) {
             return "等边三角形";
-        } else if (sideA == sideB || sideA == sideC || sideB == sideC) {
+        } else if (A == B || A == C || B == C) {
             return "等腰三角形";
         } else if (isRightTriangle()) {
             return "直角三角形";
@@ -55,27 +54,18 @@ public class Triangle {
         }
     }
 
-    // Method to check if the triangle is a right triangle
+    //判断是不是直角三角形
     private boolean isRightTriangle() {
-        double a2 = sideA * sideA;
-        double b2 = sideB * sideB;
-        double c2 = sideC * sideC;
+        double a2 = A * A;
+        double b2 = B * B;
+        double c2 = C * C;
         return (a2 + b2 == c2) || (a2 + c2 == b2) || (b2 + c2 == a2);
     }
 
-    // Override toString method
-    @Override
+    @Override//重写toString方法
     public String toString() {
         return "三角形类型：" + getTriangleType() + "\n" +
-               "面积：" + String.format("%.2f", calculateArea());
+               "面积：" + String.format("%.2f", calculateMianji());
     }
 
-    public static void main(String[] args) {
-        try {
-            Triangle triangle = new Triangle();
-            System.out.println(triangle);
-        } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
-        }
-    }
 }

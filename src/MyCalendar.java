@@ -1,4 +1,4 @@
-//在Javahomework项目中完成以下类
+//在Java homework项目中完成以下类
 //
 //设计一个日历类MyCalendar。
 //
@@ -20,7 +20,7 @@
 //
 //5）日历类定义一个方法，可以获得某年某月某日是星期几。
 //
-//6）通过引入类和注释@Test实现测试
+//6）通过引入类和注释@Test实现测试（目前没有实现）
 
 import java.util.Calendar;
 
@@ -50,12 +50,22 @@ public class MyCalendar {
         return days[dayOfWeek - 1];
     }
 
+    // 打印日历对象
+    public void printCalendar() {
+        System.out.println(this);
+    }
+
+    // 打印某年某月某日是星期几
+    public void printDayOfWeek(int day) {
+        System.out.println("星期: " + getDayOfWeek(day));
+    }
+
     // 重写toString方法
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("---------").append(year).append("年").append(month).append("月").append("----------\n");
-        sb.append("一,二,三,四,五,六,日\n");
+        sb.append("一\t二\t三\t四\t五\t六\t日\n");
 
         Calendar calendar = Calendar.getInstance();
         calendar.set(year, month - 1, 1);
@@ -63,23 +73,17 @@ public class MyCalendar {
         int daysInMonth = getDaysInMonth();
 
         for (int i = 0; i < firstDayOfWeek; i++) {
-            sb.append(",,");
+            sb.append("\t");
         }
 
         for (int day = 1; day <= daysInMonth; day++) {
-            sb.append(day);
+            sb.append(day).append("\t");
             if ((day + firstDayOfWeek) % 7 == 0) {
                 sb.append("\n");
-            } else {
-                sb.append(",");
             }
         }
 
         return sb.toString();
     }
 
-    public static void main(String[] args) {
-        MyCalendar myCalendar = new MyCalendar(2023, 9);
-        System.out.println(myCalendar);
-    }
 }
