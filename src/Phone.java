@@ -28,6 +28,56 @@ public class Phone {
     private double price;    // 价格
     private String serialNumber; // 编号
 
+    // getter和setter方法
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public int getCpuNum() {
+        return cpuNum;
+    }
+
+    public double getMemory() {
+        return memory;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getSerialNumber() {
+        return serialNumber;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setCpuNum(int cpuNum) {
+        this.cpuNum = cpuNum;
+    }
+
+    public void setMemory(double memory) {
+        this.memory = memory;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
+    }
+
+
     // 构造方法
     public Phone() {
         Scanner reader = new Scanner(System.in);
@@ -60,6 +110,7 @@ public class Phone {
     }
 
     // 重写toString方法
+    @Override
     public String toString() {
         return "---编号为" + serialNumber + "的手机参数--\n" +
                "品牌：" + brand + "\n" +
@@ -71,4 +122,8 @@ public class Phone {
                "--------------------------------------";
     }
 
+//    public static void main(String[] args) {
+//        Phone phone = new Phone();
+//        System.out.println(phone);
+//    }
 }
