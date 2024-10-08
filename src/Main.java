@@ -1,3 +1,7 @@
+import FirstHomework.MyCalendar;
+import FirstHomework.Phone;
+import FirstHomework.Triangle;
+
 import java.util.Scanner;
 
 public class Main {
@@ -6,9 +10,9 @@ public class Main {
         while (true) {
             System.out.println("请选择要运行的程序：");
             System.out.println("0. 退出");
-            System.out.println("1. Phone");
-            System.out.println("2. MyCalendar");
-            System.out.println("3. Triangle");
+            System.out.println("1. FirstHomework.Phone");
+            System.out.println("2. FirstHomework.MyCalendar");
+            System.out.println("3. FirstHomework.Triangle");
             int choice = scanner.nextInt();
 
             switch (choice) {

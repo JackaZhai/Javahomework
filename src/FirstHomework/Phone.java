@@ -1,5 +1,5 @@
-//在Javahomework项目中完成以下类
-//1、定义一个手机类（Phone），包括品牌、型号、CPU个数、内存、操作系统、价格、编号七个属性。
+package FirstHomework;//在Javahomework项目中完成以下类
+//1、定义一个手机类（FirstHomework.Phone），包括品牌、型号、CPU个数、内存、操作系统、价格、编号七个属性。
 //2、定义一个构造法，在构造法中，使用Scanner类的对象实现键盘输入，对（品牌、型号、CPU个数、内存、价格）五个属性赋值。
 //3、定义一个方法，方法中有一个操作系统名称的数组，String[] osNames={"Android","IOS","Harmary（HarmonyOS）"}，能随机返回一个操作系统名称。并在构造法中调用这个方法实现对操作系统属性赋值。
 //4、定义一个方法，方法中通过Calendar类获得创建手机对象的当前时间，并按时间生成一个编号，编号格式如yyyy-MM-dd-hh-mm-ss，方法返回这个编号。并在构造法中调用这个方法实现对编号属性赋值。
@@ -123,7 +123,7 @@ public class Phone {
     }
 
 //    public static void main(String[] args) {
-//        Phone phone = new Phone();
+//        FirstHomework.Phone phone = new FirstHomework.Phone();
 //        System.out.println(phone);
 //    }
 }

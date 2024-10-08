@@ -1,4 +1,4 @@
-//在Javahomework项目中完成以下类
+package FirstHomework;//在Javahomework项目中完成以下类
 //
 //三角形类的设计
 //
