@@ -1,4 +1,5 @@
-package FirstHomework;//在Java homework项目中完成以下类
+package FirstHomework;
+//在Java homework项目中完成以下类
 //
 //设计一个日历类MyCalendar。
 //
@@ -55,14 +56,14 @@ public class MyCalendar {
     public int getDaysInMonth() {
         Calendar calendar = Calendar.getInstance();
         calendar.set(year, month - 1, 1);
-        return calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
+        return calendar.getActualMaximum(Calendar.DAY_OF_MONTH);//获取一个月的天数
     }
 
     // 获取某年某月某日是星期几
     public String getDayOfWeek(int day) {
         Calendar calendar = Calendar.getInstance();
         calendar.set(year, month - 1, day);
-        int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
+        int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);//获取星期几
         String[] days = {"日", "一", "二", "三", "四", "五", "六"};
         return days[dayOfWeek - 1];
     }
@@ -80,27 +81,34 @@ public class MyCalendar {
     // 重写toString方法
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("---------").append(year).append("年").append(month).append("月").append("----------\n");
-        sb.append("一\t二\t三\t四\t五\t六\t日\n");
+        System.out.println("---------" + year + "年" + month + "月" + "----------");
+        System.out.println("一\t二\t三\t四\t五\t六\t日");
 
         Calendar calendar = Calendar.getInstance();
         calendar.set(year, month - 1, 1);
-        int firstDayOfWeek = calendar.get(Calendar.DAY_OF_WEEK) - 1;
+        int firstDayOfWeek = calendar.get(Calendar.DAY_OF_WEEK)-2 ;//获取第一天是星期几
         int daysInMonth = getDaysInMonth();
 
+        // 输出空白以对齐第一天的位置
         for (int i = 0; i < firstDayOfWeek; i++) {
-            sb.append("\t");
+            System.out.print("\t");
         }
 
+        // 输出每一天的日期
         for (int day = 1; day <= daysInMonth; day++) {
-            sb.append(day).append("\t");
+            System.out.print(day + "\t");
+
+            // 换行：每到周日（7列后）换行
             if ((day + firstDayOfWeek) % 7 == 0) {
-                sb.append("\n");
+                System.out.println();
             }
         }
 
-        return sb.toString();
+        // 补充末尾换行（防止最后一行没有换行）
+        System.out.println();
+
+        return "";
     }
+
 
 }

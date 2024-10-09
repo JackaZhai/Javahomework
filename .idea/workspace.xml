@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b2b6ddc-eb94-45b0-ad4d-59f04206c1ca" name="更改" comment="增加get和set方法，完成封装">
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SecondHomework/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecondHomework/Grade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SecondHomework/GradeAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecondHomework/GradeAdmin.java" afterDir="false" />
+    <list default="true" id="7b2b6ddc-eb94-45b0-ad4d-59f04206c1ca" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FirstHomework/MyCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstHomework/MyCalendar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,6 +141,7 @@
       <workItem from="1728117789094" duration="1887000" />
       <workItem from="1728298811791" duration="12000" />
       <workItem from="1728393949260" duration="2283000" />
+      <workItem from="1728479948439" duration="2952000" />
     </task>
     <task id="LOCAL-00001" summary="创建">
       <option name="closed" value="true" />
