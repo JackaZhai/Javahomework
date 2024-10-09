@@ -1,6 +1,5 @@
-import FirstHomework.MyCalendar;
-import FirstHomework.Phone;
-import FirstHomework.Triangle;
+import FirstHomework.*;
+import SecondHomework.*;
 
 import java.util.Scanner;
 
@@ -10,9 +9,10 @@ public class Main {
         while (true) {
             System.out.println("请选择要运行的程序：");
             System.out.println("0. 退出");
-            System.out.println("1. FirstHomework.Phone");
-            System.out.println("2. FirstHomework.MyCalendar");
-            System.out.println("3. FirstHomework.Triangle");
+            System.out.println("1. Phone");
+            System.out.println("2. MyCalendar");
+            System.out.println("3. Triangle");
+            System.out.println("4. Grade");
             int choice = scanner.nextInt();
 
             switch (choice) {
@@ -79,6 +79,10 @@ public class Main {
                     } catch (IllegalArgumentException e) {
                         System.out.println(e.getMessage());
                     }
+                    break;
+                case 4:
+                    GradeAdmin gradeAdmin = new GradeAdmin();
+                    gradeAdmin.run();
                     break;
                 default:
                     System.out.println("无效的选择");

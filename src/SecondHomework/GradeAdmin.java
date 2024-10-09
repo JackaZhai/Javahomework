@@ -11,97 +11,96 @@
 //2---学生成绩查询打印
 //3---学生成绩排序
 //0---退出
+
 package SecondHomework;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class GradeAdmin {
-    private Grade[] grades;
+    Grade[] grades;
+    Scanner scanner = new Scanner(System.in);
 
     public GradeAdmin() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("输入学生数量：");
-        int n = scanner.nextInt();
-        grades = new Grade[n];
-        for (int i = 0; i < n; i++) {
-            grades[i] = new Grade();
-        }
+        // 初始设置为0，使用菜单选择进入录入流程
+        this.grades = new Grade[0];
     }
 
-    // 通过关键字查询学生成绩
-    public void queryGrade(String keyword) {
-        for (Grade grade : grades) {
-            if (grade.getName().contains(keyword)) {
-                System.out.println(grade);
-            }
-        }
-    }
-
-
-    // 打印学生成绩
-    public void printGrade() {
-        double total = 0;
-        for (Grade grade : grades) {
-            System.out.println(grade);
-            total += grade.getTotalGrade();
-        }
-        System.out.println("总分：" + total + "，平均分：" + total / grades.length);
-    }
-
-    public void sortGrade(boolean ascending) {
-        for (int i = 0; i < grades.length - 1; i++) {
-            for (int j = 0; j < grades.length - 1 - i; j++) {
-                if (ascending) {
-                    if (grades[j].getTotalGrade() > grades[j + 1].getTotalGrade()) {
-                        Grade temp = grades[j];
-                        grades[j] = grades[j + 1];
-                        grades[j + 1] = temp;
-                    }
-                } else {
-                    if (grades[j].getTotalGrade() < grades[j + 1].getTotalGrade()) {
-                        Grade temp = grades[j];
-                        grades[j] = grades[j + 1];
-                        grades[j + 1] = temp;
-                    }
-                }
-            }
-        }
-        for (Grade grade : grades) {
-            System.out.println(grade);
-        }
-    }
-
+    // 添加功能入口
     public void run() {
-        Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.println("-------学生成绩系统-------");
+            System.out.println("学生成绩系统选项:");
             System.out.println("1---学生成绩录入");
             System.out.println("2---学生成绩查询打印");
             System.out.println("3---学生成绩排序");
             System.out.println("0---退出");
-            System.out.print("请输入功能编号：");
+            System.out.print("请选择操作: ");
             int choice = scanner.nextInt();
+            scanner.nextLine();  // 吞掉换行符
+
             switch (choice) {
                 case 1:
-                    new GradeAdmin();
+                    inputGrades();
                     break;
                 case 2:
-                    System.out.print("输入关键字：");
-                    queryGrade(scanner.next());
+                    printAllGrades();
                     break;
                 case 3:
-                    System.out.print("输入排序方式（升序true/降序false）：");
-                    sortGrade(scanner.nextBoolean());
+                    sortAndPrintGrades();
                     break;
                 case 0:
+                    System.out.println("退出系统");
                     return;
                 default:
-                    System.out.println("输入错误，请重新输入");
+                    System.out.println("无效选择，请重新输入");
             }
         }
     }
 
-    public static void main(String[] args) {
-        new GradeAdmin().run();
+    // 成绩录入
+    public void inputGrades() {
+        System.out.print("请输入学生人数: ");
+        int num = scanner.nextInt();
+        this.grades = new Grade[num];
+        scanner.nextLine();  // 吞掉换行符
+        for (int i = 0; i < num; i++) {
+            grades[i] = new Grade();
+        }
     }
+
+    // 成绩查询和打印
+    public void printAllGrades() {
+        if (grades.length == 0) {
+            System.out.println("无任何学生成绩记录，请先进行成绩录入。");
+            return;
+        }
+        System.out.print("输入要查询的学生姓名关键词: ");
+        String keyword = scanner.nextLine();
+        boolean found = false;
+        for (Grade grade : grades) {
+            if (grade.studentName.contains(keyword)) {
+                System.out.println(grade);
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("未找到匹配的学生记录。");
+        }
+    }
+
+    // 输出所有学生成绩和排序
+    public void sortAndPrintGrades() {
+        if (grades.length == 0) {
+            System.out.println("无任何学生成绩记录，请先进行成绩录入。");
+            return;
+        }
+        Arrays.sort(grades, Comparator.comparingInt(grade -> grade.totalScore));
+        System.out.printf("%-10s %-10s %-10s %-10s %-10s %-10s%n", "姓名", "Java", "HTML", "SQL", "总分", "平均分");
+        for (Grade grade : grades) {
+            System.out.printf("%-10s %-10d %-10d %-10d %-10d %-10.2f%n", grade.studentName, grade.javaScore,
+                    grade.htmlScore, grade.sqlScore, grade.totalScore, grade.averageScore);
+        }
+    }
+
 }

@@ -16,50 +16,34 @@ package SecondHomework;
 
 import java.util.Scanner;
 
-public class Grade {
-    private String name;
-    private double javaGrade;
-    private double htmlGrade;
-    private double sqlGrade;
-    private double totalGrade;
-    private double averageGrade;
 
+
+ public class Grade {
+    String studentName;
+    int javaScore;
+    int htmlScore;
+    int sqlScore;
+    int totalScore;
+    double averageScore;
+
+    // 无参构造方法，通过Scanner录入信息
     public Grade() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("输入学生姓名：");
-        this.name = scanner.next();
-        System.out.print("输入Java成绩：");
-        this.javaGrade = scanner.nextDouble();
-        System.out.print("输入HTML成绩：");
-        this.htmlGrade = scanner.nextDouble();
-        System.out.print("输入SQL成绩：");
-        this.sqlGrade = scanner.nextDouble();
-        this.totalGrade = javaGrade + htmlGrade + sqlGrade;
-        this.averageGrade = totalGrade / 3;
+        System.out.print("请输入学生姓名: ");
+        this.studentName = scanner.nextLine();
+        System.out.print("请输入Java成绩: ");
+        this.javaScore = scanner.nextInt();
+        System.out.print("请输入HTML成绩: ");
+        this.htmlScore = scanner.nextInt();
+        System.out.print("请输入SQL成绩: ");
+        this.sqlScore = scanner.nextInt();
+        this.totalScore = javaScore + htmlScore + sqlScore;
+        this.averageScore = totalScore / 3.0;
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public String toString() {
+        return "姓名: " + studentName + ", Java: " + javaScore + ", HTML: " + htmlScore + ", SQL: " + sqlScore
+                + ", 总分: " + totalScore + ", 平均分: " + averageScore;
     }
-
-    public double getJavaGrade() {
-        return javaGrade;
-    }
-
-    public double getHtmlGrade() {
-        return htmlGrade;
-    }
-
-    public double getSqlGrade() {
-        return sqlGrade;
-    }
-
-    public double getTotalGrade() {
-        return totalGrade;
-    }
-
-    public double getAverageGrade() {
-        return averageGrade;
-    }
-
 }
