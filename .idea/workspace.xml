@@ -4,32 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b2b6ddc-eb94-45b0-ad4d-59f04206c1ca" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter1/MyCalendarTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter3/chapter3workdemo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter3/libary/error.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2024_10_9_17_17____.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_10_9_17_17_取消提交了更改_[更改]/shelved.patch" beforeDir="false" />
+    <list default="true" id="7b2b6ddc-eb94-45b0-ad4d-59f04206c1ca" name="更改" comment="作业一日历添加测试类，作业二修正">
+      <change afterPath="$PROJECT_DIR$/src/chapter2/student/score/Toolbox.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javahomework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Javahomework.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FirstHomework/MyCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter1/MyCalendar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FirstHomework/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter1/Phone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FirstHomework/ToolBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter1/ToolBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FirstHomework/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter1/Triangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SecondHomework/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/student/score/Grade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SecondHomework/GradeAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/student/score/GradeAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter3workdemo/libary/APP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter3/libary/APP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter3workdemo/libary/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter3/libary/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter3workdemo/libary/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter3/libary/Loan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter3workdemo/libary/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter3/libary/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter3workdemo/libary/catalogue/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter3/libary/catalogue/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter3workdemo/libary/catalogue/CatalogueItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter3/libary/catalogue/CatalogueItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter3workdemo/libary/catalogue/FileReadWrite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter3/libary/catalogue/FileReadWrite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter3workdemo/resources/Lee60.bib" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter3/resources/Lee60.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/text.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter1/MyCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter1/MyCalendar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter2/student/score/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/student/score/Grade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter2/student/score/GradeAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/student/score/GradeAdmin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +99,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyCalendarTest.testToString">
+  <component name="RunManager">
     <configuration name="GradeAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chapter2.GradeAdmin" />
       <module name="Javahomework" />
@@ -241,7 +222,7 @@
       <workItem from="1728721101780" duration="1213000" />
       <workItem from="1729077116652" duration="797000" />
       <workItem from="1729077987951" duration="549000" />
-      <workItem from="1729078548819" duration="9943000" />
+      <workItem from="1729078548819" duration="15606000" />
     </task>
     <task id="LOCAL-00001" summary="创建">
       <option name="closed" value="true" />
@@ -299,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727601530330</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="作业一日历添加测试类，作业二修正">
+      <option name="closed" value="true" />
+      <created>1729241296551</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1729241296551</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,6 +323,8 @@
     <MESSAGE value="update by ai" />
     <MESSAGE value="完成大概的" />
     <MESSAGE value="增加get和set方法，完成封装" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加get和set方法，完成封装" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/FirstHomework/MyCalendar.java" />
+    <MESSAGE value="作业一日历添加测试类，作业二修正" />
+    <option name="LAST_COMMIT_MESSAGE" value="作业一日历添加测试类，作业二修正" />
   </component>
 </project>

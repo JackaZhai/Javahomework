@@ -12,7 +12,7 @@ public class Main {
             System.out.println("1-Phone");
             System.out.println("2-MyCalendar");
             System.out.println("3-Triangle");
-            System.out.println("44-Grade");
+            System.out.println("4-Grade");
             System.out.println("---------------------");
             int choice = scanner.nextInt();
 

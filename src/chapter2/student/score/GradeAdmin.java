@@ -2,53 +2,34 @@ package chapter2.student.score;
 
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.Scanner;
 
 public class GradeAdmin {
     private Grade[] grades; // 存储成绩对象的数组
-    private int n; // 当前学生数量
+    private int size; // 当前存储的成绩数量
 
     public GradeAdmin() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("请输入要录入的学生数量: ");
-        while (true) {
-            try {
-                int max = scanner.nextInt();
-                scanner.nextLine(); // 吞掉换行符
-                if (max <= 0) {
-                    throw new NumberFormatException("学生数量必须大于0。");
-                }
-                this.grades = new Grade[max];
-                this.n = 0;
-                break;
-            } catch (NumberFormatException e) {
-                System.out.println("无效输入，请输入一个正整数。");
-                System.out.print("请输入要录入的学生数量: ");
-                scanner.nextLine(); // 吞掉无效输入
-            }
-        }
+        grades = new Grade[5]; // 初始容量为5
+        size = 0;
     }
 
     public void show() {
-        Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("\n-------学生成绩系统-------");
             System.out.println("1---学生成绩录入");
             System.out.println("2---学生成绩查询打印");
             System.out.println("3---学生成绩排序");
             System.out.println("0---退出");
-            System.out.print("请选择操作: ");
-            String choice = scanner.nextLine();
+            String choice = Toolbox.getStringInput("请选择操作: ");
 
             switch (choice) {
                 case "1":
-                    inputGrades(scanner);
+                    inputGrades();
                     break;
                 case "2":
-                    find(scanner);
+                    find();
                     break;
                 case "3":
-                    sortAndPrintGrades(scanner);
+                    sortAndPrintGrades();
                     break;
                 case "0":
                     System.out.println("退出系统。");
@@ -59,34 +40,35 @@ public class GradeAdmin {
         }
     }
 
-    //成绩录入功能
-    private void inputGrades(Scanner scanner) {
+    // 成绩录入功能
+    private void inputGrades() {
         System.out.println("\n------学生成绩录入------");
-        while (n < grades.length) {
+        while (true) {
             try {
-                grades[n] = new Grade();
-                n++;
+                if (size >= grades.length) {
+                    expandArray();
+                }
+                grades[size++] = new Grade();
             } catch (Exception e) {
                 System.out.println("录入过程中出错，请重新录入。");
-                scanner.nextLine(); // 清除错误输入
+                Toolbox.scanner.nextLine(); // 清除错误输入
                 continue;
             }
-            if (n >= grades.length) {
-                System.out.println("已达到预定录入数量。");
-                break;
-            }
-            System.out.print("是否继续录入（y/n）: ");
-            String choice = scanner.nextLine();
+            String choice = Toolbox.getStringInput("是否继续录入（y/n）: ");
             if (!choice.equalsIgnoreCase("y")) {
                 break;
             }
         }
     }
 
+    // 扩容方法
+    private void expandArray() {
+        grades = Arrays.copyOf(grades, grades.length * 2);
+    }
+
     // 成绩查询功能
-    private void find(Scanner scanner) {
-        System.out.print("\n输入要查询的学生姓名关键词: ");
-        String keyword = scanner.nextLine();
+    private void find() {
+        String keyword = Toolbox.getStringInput("\n输入要查询的学生姓名关键词: ");
         Grade[] matchedGrades = findStudentGradeInfos(keyword);
         if (matchedGrades.length == 0) {
             System.out.println("未找到匹配的学生成绩。");
@@ -95,20 +77,21 @@ public class GradeAdmin {
         }
     }
 
-    //根据关键字模糊查询学生成绩
+    // 根据关键字模糊查询学生成绩
     private Grade[] findStudentGradeInfos(String keyword) {
-        Grade[] temp = new Grade[n];
+        Grade[] matchedGrades = new Grade[size];
         int count = 0;
-        for (int i = 0; i < n; i++) {
-            if (grades[i].getStudentName().contains(keyword)) {             //contains方法判断是否包含关键字，仅当且仅当此字符串包含指定的字符序列时返回 true。
-                temp[count] = grades[i];
-                count++;
+        for (int i = 0; i < size; i++) {
+            if (grades[i].getStudentName().contains(keyword)) {
+                matchedGrades[count++] = grades[i];
             }
         }
-        return Arrays.copyOf(temp, count);
+        Grade[] result = new Grade[count];
+        System.arraycopy(matchedGrades, 0, result, 0, count);
+        return result;
     }
 
-    //打印成绩列表
+    // 打印成绩列表
     public void printGrades(Grade[] studentGradeInfos) {
         System.out.println("\n-----------------------------------------------------------------");
         System.out.printf("%-10s %-10s %-10s %-10s %-10s %-10s%n", "姓名", "Java", "SQL", "HTML", "总分", "平均分");
@@ -125,32 +108,28 @@ public class GradeAdmin {
         System.out.println("-----------------------------------------------------------------");
     }
 
-    //成绩排序并打印功能
-    public void sortAndPrintGrades(Scanner scanner) {
-        if (n == 0) {
+    // 成绩排序并打印功能
+    public void sortAndPrintGrades() {
+        if (size == 0) {
             System.out.println("无任何学生成绩记录，请先进行成绩录入。");
             return;
         }
 
-        label://label用于跳出多重循环
+        label:
+        // label跳出多循环
         while (true) {
             System.out.println("\n请选择排序方式：");
             System.out.println("1-升序");
             System.out.println("2-降序");
             System.out.println("3-退出");
-            System.out.print("请选择操作: ");
-            String choice = scanner.nextLine();
+            String choice = Toolbox.getStringInput("请选择操作: ");
 
             switch (choice) {
                 case "1":
-                    Arrays.sort(grades, 0, n, Comparator.comparingInt(Grade::getTotalScore));
-                    printGrades(Arrays.copyOf(grades, n));
-
+                    Arrays.sort(grades, 0, size, Comparator.comparingInt(Grade::getTotalScore));
                     break;
                 case "2":
-                    Arrays.sort(grades, 0, n, Comparator.comparingInt(Grade::getTotalScore).reversed());
-                    printGrades(Arrays.copyOf(grades, n));
-
+                    Arrays.sort(grades, 0, size, Comparator.comparingInt(Grade::getTotalScore).reversed());
                     break;
                 case "3":
                     break label;
@@ -158,7 +137,7 @@ public class GradeAdmin {
                     System.out.println("错误输入，请重新输入。");
                     break;
             }
+            printGrades(Arrays.copyOf(grades, size));
         }
     }
-
 }

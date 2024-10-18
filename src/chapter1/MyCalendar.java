@@ -23,26 +23,16 @@ package chapter1;
 //
 //6）通过引入类和注释@Test实现测试
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Calendar;
 
-
+@Getter
+@Setter
 public class MyCalendar {
     private int year;
     private int month;
-
-    // getter和setter方法
-    public int getMonth() {
-        return month;
-    }
-    public void setMonth(int month) {
-        this.month = month;
-    }
-    public int getYear() {
-        return year;
-    }
-    public void setYear(int year) {
-        this.year = year;
-    }
 
     // 构造方法
     public MyCalendar(int year, int month) {
