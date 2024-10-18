@@ -12,22 +12,74 @@
 //3---学生成绩排序
 //0---退出
 
-package SecondHomework;
+package chapter2.student.score;
+
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Scanner;
 
-
-
- public class Grade {
+@Getter
+@Setter
+public class Grade {
     String studentName;
     int javaScore;
     int htmlScore;
     int sqlScore;
+
+//    public String getStudentName() {
+//        return studentName;
+//    }
+//
+//    public void setStudentName(String studentName) {
+//        this.studentName = studentName;
+//    }
+//
+//    public int getJavaScore() {
+//        return javaScore;
+//    }
+//
+//    public void setJavaScore(int javaScore) {
+//        this.javaScore = javaScore;
+//    }
+//
+//    public int getHtmlScore() {
+//        return htmlScore;
+//    }
+//
+//    public void setHtmlScore(int htmlScore) {
+//        this.htmlScore = htmlScore;
+//    }
+//
+//    public int getSqlScore() {
+//        return sqlScore;
+//    }
+//
+//    public void setSqlScore(int sqlScore) {
+//        this.sqlScore = sqlScore;
+//    }
+//
+//    public int getTotalScore() {
+//        return totalScore;
+//    }
+//
+//    public void setTotalScore(int totalScore) {
+//        this.totalScore = totalScore;
+//    }
+//
+//    public double getAverageScore() {
+//        return averageScore;
+//    }
+//
+//    public void setAverageScore(double averageScore) {
+//        this.averageScore = averageScore;
+//    }
+
     int totalScore;
     double averageScore;
 
-    // 无参构造方法，通过Scanner录入信息
-    public Grade() {
+    // 通过Scanner录入信息（无参构造法）
+    public Grade() throws Exception {
         Scanner scanner = new Scanner(System.in);
         System.out.print("请输入学生姓名: ");
         this.studentName = scanner.nextLine();
@@ -37,8 +89,9 @@ import java.util.Scanner;
         this.htmlScore = scanner.nextInt();
         System.out.print("请输入SQL成绩: ");
         this.sqlScore = scanner.nextInt();
-        this.totalScore = javaScore + htmlScore + sqlScore;
+        this.totalScore = this.javaScore + this.htmlScore + this.sqlScore;
         this.averageScore = totalScore / 3.0;
+        scanner.nextLine(); // 吞掉换行符
     }
 
     @Override

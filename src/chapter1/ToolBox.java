@@ -1,4 +1,4 @@
-package FirstHomework;//没有用
+package chapter1;//没有用
 import java.util.Scanner;
 
 public class ToolBox {

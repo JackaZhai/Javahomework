@@ -1,4 +1,4 @@
-package chapter3workdemo.libary.catalogue;
+package chapter3.libary.catalogue;
 
 import java.io.IOException;
 import java.nio.file.Files;

@@ -1,4 +1,4 @@
-package chapter3workdemo.libary.catalogue;
+package chapter3.libary.catalogue;
 
 
 public class CatalogueItem {

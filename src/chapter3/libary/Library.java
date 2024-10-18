@@ -1,7 +1,10 @@
-package chapter3workdemo.libary;
+package chapter3.libary;
 
+import chapter3.libary.catalogue.CatalogueItem;
 
-import cqjtu.java.libary.catalogue.CatalogueItem;
+import java.util.Comparator;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class Library {
     /**
@@ -31,8 +34,8 @@ public class Library {
     }
 
     /**
-     * Constructor that takes a library name and the loan length
-     * as parameters
+     * 采用库名称和借用长度的构造函数
+     * 作为参数
      * @param name The name of the library
      * @param loanLength The number of days books should be loaned for
      */
@@ -46,12 +49,11 @@ public class Library {
      * @return "Welcome to <library name>"
      */
     public String welcome() {
-        // TODO: Implement
-        return null;
+        return "Welcome to " + this.name;
     }
 
     /**
-     * Returns the library name
+     * 返回库名称
      * @return Library name
      */
     public String getName() {
@@ -60,13 +62,18 @@ public class Library {
     }
 
     /**
-     * Add the given book to the catalogue.
+     * 将给定的书籍添加到目录中。
      *
-     * @param newItem Item to be added to catalogue
-     * @return Returns true if there is space in the catalogue and new item is successfully added; false otherwise
+     * @param newItem 要添加到目录的商品
+     * @return 如果目录中有空间并且成功添加新商品，则返回 true; 否则返回 false
      */
     public boolean addItem(CatalogueItem newItem) {
-        // TODO: Implement
+        for (int i = 0; i < catalogue.length; i++) {
+            if (catalogue[i] == null) {
+                catalogue[i] = newItem;
+                return true;
+            }
+        }
         return false;
     }
 
@@ -80,8 +87,8 @@ public class Library {
     }
 
     /**
-     * Find item with given title or ISBN and remove a given number of copies from the catalogue.
-     * Assumes there are no duplicated title or ISBN.
+     * 查找具有给定标题或 ISBN 的项目，并从目录中删除给定数量的副本。
+     * 假设没有重复的标题或 ISBN。
      * @param titleOrISBN Exact title or ISBN of the item to be removed
      * @param n Number of copies to remove
      */
@@ -90,7 +97,7 @@ public class Library {
     }
 
     /**
-     * Registers the loan of a book given its exact title or ISBN.
+     * 根据确切的书名或 ISBN 登记图书的借阅。
      * 
      * @param titleOrISBN The title or ISBN of the book to be loaned
      * @param user Name of user loaning catalogue item
@@ -98,8 +105,23 @@ public class Library {
      * @throws ItemNotFoundException if a book with the given title does not exist in the catalogue
      * @throws NoCopyAvailableException if there are no copies available of the given book
      */
-    public boolean loanItem(String titleOrISBN, Person user) {
-        // TODO: Implement
+    public boolean loanItem(String titleOrISBN, Person user) throws ItemNotFoundException, NoCopyAvailableException {
+        CatalogueItem item = findItem(titleOrISBN);
+        if (item == null) {
+            throw new ItemNotFoundException("Item with title or ISBN " + titleOrISBN + " not found.");
+        }
+        if (item.getCopies() <= 0) {
+            throw new NoCopyAvailableException("No copies available for item with title or ISBN " + titleOrISBN);
+        }
+        item.setCopies(item.getCopies() - 1);
+        Loan loan = new Loan(item, user, loanLength);
+        // 假设 loans 数组已经初始化并且有足够的空间
+        for (int i = 0; i < loans.length; i++) {
+            if (loans[i] == null) {
+                loans[i] = loan;
+                return true;
+            }
+        }
         return false;
     }
 
@@ -154,12 +176,23 @@ public class Library {
      * <Output of call to {@link Library#welcome()}>
      * Catalogue
      * ====================
-     * <Output of call to method toString in the item>
+     * <对项中方法 toString 的调用输出>
      * ====================
      */
     public void printCatalogue() {
-        // TODO: Implement
-    };
+        System.out.println("====================");
+        System.out.println(welcome());
+        System.out.println("Catalogue");
+        System.out.println("====================");
+        for (CatalogueItem item : catalogue) {
+            if (item != null) {
+                System.out.println(item.toString());
+                System.out.println("====================");
+            }
+        }
+
+
+    }
 
     /**
      * Print the list of loans that are overdue (i.e., due date has passed),

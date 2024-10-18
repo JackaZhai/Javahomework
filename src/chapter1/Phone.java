@@ -1,4 +1,5 @@
-package FirstHomework;//在Javahomework项目中完成以下类
+package chapter1;
+//在Javahomework项目中完成以下类
 //1、定义一个手机类（FirstHomework.Phone），包括品牌、型号、CPU个数、内存、操作系统、价格、编号七个属性。
 //2、定义一个构造法，在构造法中，使用Scanner类的对象实现键盘输入，对（品牌、型号、CPU个数、内存、价格）五个属性赋值。
 //3、定义一个方法，方法中有一个操作系统名称的数组，String[] osNames={"Android","IOS","Harmary（HarmonyOS）"}，能随机返回一个操作系统名称。并在构造法中调用这个方法实现对操作系统属性赋值。
@@ -14,6 +15,7 @@ package FirstHomework;//在Javahomework项目中完成以下类
 //价格：6999.0
 //-------------------------------------
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
@@ -79,8 +81,9 @@ public class Phone {
 
 
     // 构造方法
-    public Phone() {
-        Scanner reader = new Scanner(System.in);
+public Phone() {
+    Scanner reader = new Scanner(System.in);
+    try {
         System.out.print("输入品牌：");
         this.brand = reader.nextLine();
         System.out.print("输入型号：");
@@ -93,7 +96,10 @@ public class Phone {
         this.price = reader.nextDouble();
         this.OS = getOS();
         this.serialNumber = getDateTime();
+    } catch (InputMismatchException e) {
+        throw new IllegalArgumentException("输入无效，请输入正确的值。", e);
     }
+}
 
     // 返回随机操作系统名称的方法
     private String getOS() {

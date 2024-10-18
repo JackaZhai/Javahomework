@@ -1,4 +1,4 @@
-package FirstHomework;
+package chapter1;
 //在Java homework项目中完成以下类
 //
 //设计一个日历类MyCalendar。
@@ -21,9 +21,10 @@ package FirstHomework;
 //
 //5）日历类定义一个方法，可以获得某年某月某日是星期几。
 //
-//6）通过引入类和注释@Test实现测试（目前没有实现）
+//6）通过引入类和注释@Test实现测试
 
 import java.util.Calendar;
+
 
 public class MyCalendar {
     private int year;
@@ -33,15 +34,12 @@ public class MyCalendar {
     public int getMonth() {
         return month;
     }
-
     public void setMonth(int month) {
         this.month = month;
     }
-
     public int getYear() {
         return year;
     }
-
     public void setYear(int year) {
         this.year = year;
     }
@@ -86,7 +84,7 @@ public class MyCalendar {
 
         Calendar calendar = Calendar.getInstance();
         calendar.set(year, month - 1, 1);
-        int firstDayOfWeek = calendar.get(Calendar.DAY_OF_WEEK)-2 ;//获取第一天是星期几
+        int firstDayOfWeek = calendar.get(Calendar.DAY_OF_WEEK)-2 ;//获取第一天是星期几，-2
         int daysInMonth = getDaysInMonth();
 
         // 输出空白以对齐第一天的位置
@@ -112,3 +110,4 @@ public class MyCalendar {
 
 
 }
+

@@ -1,4 +1,4 @@
-package chapter3workdemo.libary;
+package chapter3.libary;
 
 import cqjtu.java.libary.catalogue.CatalogueItem;
 

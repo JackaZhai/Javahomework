@@ -1,4 +1,4 @@
-package FirstHomework;//在Javahomework项目中完成以下类
+package chapter1;//在Javahomework项目中完成以下类
 //
 //三角形类的设计
 //
@@ -9,6 +9,7 @@ package FirstHomework;//在Javahomework项目中完成以下类
 //3、重写toString的方法，实现打印三角形对象，能显示三角形类型（等边、等腰、直角等等）和三角形的面积（保留两位小数））
 
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Triangle {
@@ -43,23 +44,34 @@ public class Triangle {
 
     public Triangle() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("输入边长A：");
-        this.A = scanner.nextDouble();
-        System.out.print("输入边长B：");
-        this.B = scanner.nextDouble();
-        System.out.print("输入边长C：");
-        this.C = scanner.nextDouble();
+        this.A = getInput("输入边长A：", scanner);
+        this.B = getInput("输入边长B：", scanner);
+        this.C = getInput("输入边长C：", scanner);
 
         if (!goodTriangle()) {
             throw new IllegalArgumentException("输入的边长不能构成三角形");
         }
     }
 
+    private double getInput(String prompt, Scanner scanner) {
+        double value;
+        while (true) {
+            System.out.print(prompt);
+            try {
+                value = scanner.nextDouble();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("输入无效，请输入一个数字。");
+                scanner.next(); // 清除无效输入
+            }
+        }
+        return value;
+    }
+
     //判断是不是正常的三角形
     private boolean goodTriangle() {
         return (A + B > C) && (A + C > B) && (B + C > A);
     }
-
 
     //计算面积，使用海伦公式
     private double calculateMianji() {
@@ -92,5 +104,4 @@ public class Triangle {
         return "三角形类型：" + getTriangleType() + "\n" +
                "面积：" + String.format("%.2f", calculateMianji());
     }
-
 }
