@@ -1,4 +1,4 @@
-package chapter1;
+package FirstHomework;
 //在Java homework项目中完成以下类
 //
 //设计一个日历类MyCalendar。

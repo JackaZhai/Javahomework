@@ -1,9 +1,11 @@
-package chapter1;
+package FirstHomework;
 
 import org.junit.Test;
-import static org.junit.Assert.*;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+
+import static org.junit.Assert.assertEquals;
 
 public class MyCalendarTest {
 

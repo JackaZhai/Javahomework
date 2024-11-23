@@ -1,4 +1,4 @@
-package chapter1;
+package FirstHomework;
 //在Javahomework项目中完成以下类
 //1、定义一个手机类（FirstHomework.Phone），包括品牌、型号、CPU个数、内存、操作系统、价格、编号七个属性。
 //2、定义一个构造法，在构造法中，使用Scanner类的对象实现键盘输入，对（品牌、型号、CPU个数、内存、价格）五个属性赋值。
@@ -15,10 +15,10 @@ package chapter1;
 //价格：6999.0
 //-------------------------------------
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.Calendar;
-import java.text.SimpleDateFormat;
 
 
 public class Phone {

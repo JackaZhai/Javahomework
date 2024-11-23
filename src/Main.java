@@ -1,7 +1,10 @@
-import FirstHomework.*;
-import SecondHomework.*;
+import FirstHomework.MyCalendar;
+import FirstHomework.Phone;
+import FirstHomework.Triangle;
+import FourthHomework.NO2.Menu;
+import FourthHomework.NO2.Question;
 import FourthHomework.StudentInfosAdmin;
-import FourthHomework.NO2.*;
+import SecondHomework.GradeAdmin;
 
 import java.util.Scanner;
 
@@ -11,7 +14,6 @@ public class Main {
         StudentInfosAdmin admin = new StudentInfosAdmin();
         Menu menu = new Menu();
 
-        // 添加题目1-5
         menu.addQuestion(new Question(1, 1, "Phone") {
             @Override
             public void run() {
