@@ -4,13 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b2b6ddc-eb94-45b0-ad4d-59f04206c1ca" name="更改" comment="作业一日历添加测试类，作业二修正">
-      <change afterPath="$PROJECT_DIR$/src/chapter2/student/score/Toolbox.java" afterDir="false" />
+    <list default="true" id="7b2b6ddc-eb94-45b0-ad4d-59f04206c1ca" name="更改" comment="修正历的bug">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FourthHomework/NO2/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FourthHomework/NO2/Question.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FourthHomework/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FourthHomework/StudentInfosAdmin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ThirdHomework/chapter3/Chapter3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ThirdHomework/cqjtu/java/libary/Library.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ThirdHomework/cqjtu/java/libary/Loan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ThirdHomework/cqjtu/java/libary/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ThirdHomework/cqjtu/java/libary/catalogue/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ThirdHomework/cqjtu/java/libary/catalogue/CatalogueItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ThirdHomework/cqjtu/java/libary/catalogue/except/ItemAlreadyReturnedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ThirdHomework/cqjtu/java/libary/catalogue/except/ItemNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ThirdHomework/cqjtu/java/libary/catalogue/except/NoCopyAvailableException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ThirdHomework/io/FileReadWrite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ThirdHomework/resources/Lee60.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2024_10_9_17_17____.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_10_9_17_17_取消提交了更改_[更改]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javahomework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Javahomework.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter1/MyCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter1/MyCalendar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter2/student/score/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/student/score/Grade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter2/student/score/GradeAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/student/score/GradeAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SecondHomework/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecondHomework/Grade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SecondHomework/GradeAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecondHomework/GradeAdmin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +37,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Exception" />
         <option value="Class" />
       </list>
     </option>
@@ -38,8 +54,9 @@
     &quot;accountId&quot;: &quot;b2445982-8a4c-465d-8e59-50f4e901bd89&quot;
   }
 }</component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk-22/lib/src.zip!/java.base/java/lang/StringBuilder.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk-22/lib/src.zip!/java.base/java/util/Calendar.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -55,9 +72,6 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "true",
-    "JUnit.MyCalendarTest.executor": "Run",
-    "JUnit.MyCalendarTest.testGetDayOfWeek.executor": "Run",
-    "JUnit.MyCalendarTest.testToString.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -73,10 +87,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/JackZhai/IdeaProjects/Javahomework/src/Main.java",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "settings.sync",
+    "settings.editor.selected.configurable": "configurable.group.editor",
     "vue.rearranger.settings.migration": "true",
     "应用程序.GradeAdmin.executor": "Run",
     "应用程序.Main.executor": "Run",
@@ -92,33 +103,17 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\JackZhai\IdeaProjects\Javahomework\src" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/chapter3/libary" />
-    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="GradeAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chapter2.GradeAdmin" />
+      <option name="MAIN_CLASS_NAME" value="SecondHomework.GradeAdmin" />
       <module name="Javahomework" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GradeAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chapter2.GradeAdmin" />
-      <module name="Javahomework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chapter2.*" />
+          <option name="PATTERN" value="SecondHomework.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,55 +122,14 @@
       </method>
     </configuration>
     <configuration name="Phone" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chapter1.Phone" />
+      <option name="MAIN_CLASS_NAME" value="FirstHomework.Phone" />
       <module name="Javahomework" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Phone" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chapter1.Phone" />
-      <module name="Javahomework" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyCalendarTest.testGetDayOfWeek" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Javahomework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chapter1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="chapter1" />
-      <option name="MAIN_CLASS_NAME" value="chapter1.MyCalendarTest" />
-      <option name="METHOD_NAME" value="testGetDayOfWeek" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyCalendarTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Javahomework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chapter1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="chapter1" />
-      <option name="MAIN_CLASS_NAME" value="chapter1.MyCalendarTest" />
-      <option name="METHOD_NAME" value="testToString" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MyCalendarTest.testToString" />
-        <item itemvalue="JUnit.MyCalendarTest.testGetDayOfWeek" />
         <item itemvalue="应用程序.GradeAdmin" />
         <item itemvalue="应用程序.Phone" />
       </list>
@@ -184,8 +138,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
       </set>
     </attachedChunks>
   </component>
@@ -216,13 +170,10 @@
       <workItem from="1728117789094" duration="1887000" />
       <workItem from="1728298811791" duration="12000" />
       <workItem from="1728393949260" duration="2283000" />
-      <workItem from="1728479948439" duration="2952000" />
-      <workItem from="1728707334139" duration="1639000" />
-      <workItem from="1728720853881" duration="238000" />
-      <workItem from="1728721101780" duration="1213000" />
-      <workItem from="1729077116652" duration="797000" />
-      <workItem from="1729077987951" duration="549000" />
-      <workItem from="1729078548819" duration="15606000" />
+      <workItem from="1728479948439" duration="6123000" />
+      <workItem from="1732105094837" duration="2752000" />
+      <workItem from="1732285699730" duration="1550000" />
+      <workItem from="1732350926359" duration="1311000" />
     </task>
     <task id="LOCAL-00001" summary="创建">
       <option name="closed" value="true" />
@@ -280,13 +231,13 @@
       <option name="project" value="LOCAL" />
       <updated>1727601530330</updated>
     </task>
-    <task id="LOCAL-00008" summary="作业一日历添加测试类，作业二修正">
+    <task id="LOCAL-00008" summary="修正历的bug">
       <option name="closed" value="true" />
-      <created>1729241296551</created>
+      <created>1728483472098</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1729241296551</updated>
+      <updated>1728483472098</updated>
     </task>
     <option name="localTasksCounter" value="9" />
     <servers />
@@ -323,8 +274,7 @@
     <MESSAGE value="update by ai" />
     <MESSAGE value="完成大概的" />
     <MESSAGE value="增加get和set方法，完成封装" />
-    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/FirstHomework/MyCalendar.java" />
-    <MESSAGE value="作业一日历添加测试类，作业二修正" />
-    <option name="LAST_COMMIT_MESSAGE" value="作业一日历添加测试类，作业二修正" />
+    <MESSAGE value="修正历的bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修正历的bug" />
   </component>
 </project>
