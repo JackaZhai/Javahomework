@@ -6,25 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7b2b6ddc-eb94-45b0-ad4d-59f04206c1ca" name="更改" comment="第四次，第三次作业增加">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter1/MyCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstHomework/MyCalendar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter1/MyCalendarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstHomework/MyCalendarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter1/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstHomework/Phone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter1/ToolBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstHomework/ToolBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter1/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstHomework/Triangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter2/student/score/Grade.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter2/student/score/GradeAdmin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter2/student/score/Toolbox.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter3/chapter3workdemo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter3/libary/APP.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter3/libary/Library.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter3/libary/Loan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter3/libary/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter3/libary/catalogue/Book.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter3/libary/catalogue/CatalogueItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter3/libary/catalogue/FileReadWrite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter3/libary/error.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter3/resources/Lee60.bib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FourthHomework/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FourthHomework/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FourthHomework/StudentInfosAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FourthHomework/StudentInfosAdmin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +24,7 @@
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{

@@ -16,7 +16,7 @@ public class StudentInfosAdmin {
 
     // 添加学生方法，默认添加50个学生
     public void addStudents() {
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 2; i++) {
             Student student = new Student(nextId++);
             students.add(student);
         }

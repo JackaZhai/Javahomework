@@ -1,12 +1,15 @@
+
 package FourthHomework;
 
 import SecondHomework.Grade;
-
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Random;
 import java.util.Calendar;
 
-public class Student extends Grade {
+public class Student extends Grade implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private int id; // 学生ID
     private String major; // 学生专业
     private Date enrollmentDate; // 入学日期
