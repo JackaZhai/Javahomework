@@ -5,6 +5,8 @@ import FourthHomework.NO2.Menu;
 import FourthHomework.NO2.Question;
 import FourthHomework.StudentInfosAdmin;
 import SecondHomework.GradeAdmin;
+import FifthHomework.chapter5_1.MyWeather;
+import FifthHomework.chapter5_2.FileLoadDown;
 
 import java.util.Scanner;
 
@@ -147,6 +149,25 @@ public class Main {
             }
         });
 
+        menu.addQuestion(new Question(1, 6, "城市天气查询") {
+            @Override
+            public void run() {
+                MyWeather myWeather = new MyWeather();
+                myWeather.showWeather();
+            }
+        });
+
+        menu.addQuestion(new Question(1, 7, "文件下载") {
+            @Override
+            public void run() {
+                FileLoadDown loadFile = new FileLoadDown();
+                String url = "https://tse1-mm.cn.bing.net/th/id/OIP-C.s5BYekl6gfkEmjCLFAOGmwHaFj?rs=1&pid=ImgDetMain";
+                String fileName = "图片1";
+                String savePath = "/Users/Zhai/IdeaProjects/Javahomework/src/FifthHomework/chapter5_2";
+                loadFile.openNetFile(url, fileName, savePath);
+            }
+        });
+
         while (true) {
             System.out.println("请选择要运行的程序：");
             System.out.println("0. 退出");
@@ -155,6 +176,8 @@ public class Main {
             System.out.println("3. Triangle");
             System.out.println("4. Grade");
             System.out.println("5. 学生信息管理系统");
+            System.out.println("6. 城市天气查询");
+            System.out.println("7. 文件下载");
             int choice = scanner.nextInt();
 
             switch (choice) {
@@ -175,6 +198,12 @@ public class Main {
                     break;
                 case 5:
                     menu.runQuestion(1, 5);
+                    break;
+                case 6:
+                    menu.runQuestion(1, 6);
+                    break;
+                case 7:
+                    menu.runQuestion(1, 7);
                     break;
                 default:
                     System.out.println("无效的选择");
