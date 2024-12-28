@@ -2,11 +2,16 @@
 package FourthHomework;
 
 import SecondHomework.Grade;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Random;
 import java.util.Calendar;
 
+@Getter
+@Setter
 public class Student extends Grade implements Serializable {
     private static final long serialVersionUID = 1L;
 

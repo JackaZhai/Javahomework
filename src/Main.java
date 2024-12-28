@@ -7,6 +7,9 @@ import FourthHomework.StudentInfosAdmin;
 import SecondHomework.GradeAdmin;
 import FifthHomework.chapter5_1.MyWeather;
 import FifthHomework.chapter5_2.FileLoadDown;
+import SixHomework.CourseOperation;
+import SixHomework.GradeOperation;
+import SixHomework.StudentOperation;
 
 import java.util.Scanner;
 
@@ -168,6 +171,31 @@ public class Main {
             }
         });
 
+        menu.addQuestion(new Question(1, 8, "基于JDBC的学生选课与成绩系统") {
+            @Override
+            public void run() {
+                System.out.println("请选择操作：");
+                System.out.println("1. 课程管理系统");
+                System.out.println("2. 学生管理系统");
+                System.out.println("3. 学生选课系统 ");
+                int choice6 = scanner.nextInt();
+                switch (choice6) {
+                    case 1:
+                        CourseOperation.show();
+                        break;
+                    case 2:
+                        StudentOperation.show();
+                        break;
+                    case 3:
+                        GradeOperation.show();
+                        break;
+                    default:
+                        System.out.println("无效的选择");
+                        break;
+                }
+            }
+        });
+
         while (true) {
             System.out.println("请选择要运行的程序：");
             System.out.println("0. 退出");
@@ -178,6 +206,7 @@ public class Main {
             System.out.println("5. 学生信息管理系统");
             System.out.println("6. 城市天气查询");
             System.out.println("7. 文件下载");
+            System.out.println("8. 基于JDBC的学生选课与成绩系统");
             int choice = scanner.nextInt();
 
             switch (choice) {
@@ -204,6 +233,9 @@ public class Main {
                     break;
                 case 7:
                     menu.runQuestion(1, 7);
+                    break;
+                case 8:
+                    menu.runQuestion(1, 8);
                     break;
                 default:
                     System.out.println("无效的选择");

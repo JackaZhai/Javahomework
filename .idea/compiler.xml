@@ -4,5 +4,8 @@
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Javahomework" target="" />
+    </bytecodeTargetLevel>
   </component>
 </project>
