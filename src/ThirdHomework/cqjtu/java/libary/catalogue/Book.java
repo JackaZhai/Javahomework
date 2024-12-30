@@ -50,25 +50,19 @@ public class Book extends CatalogueItem {
     }
 
     public static Book fromBibtex(String bibtex) throws IllegalArgumentException {
-        int k = bibtex.indexOf(",");
-        bibtex = bibtex.substring(k + 1, bibtex.length() - 1);
-        bibtex = bibtex.replace("\n", "");
-        String[] info = bibtex.split(",");
-        String title = info[0].split("=")[1].trim().replace("\"", "");
-        String n = info[1].split("=")[1].trim().replace("\"", "");
-        String[] name = n.split(" ");
-        Person author = new Person(name[0], name[1]);
-        String isbn = info[2].split("=")[1].trim().replace("\"", "");
-        String year = info[3].split("=")[1].trim().replace("\"", "");
-        return new Book(title, author, isbn, Integer.parseInt(year));
-    }
+    int k = bibtex.indexOf(",");
+    bibtex = bibtex.substring(k + 1, bibtex.length() - 1);
+    bibtex = bibtex.replace("\n", "");
+    String[] info = bibtex.split(",");
+    String title = info[0].split("=")[1].trim().replace("\"", "");
+    String n = info[1].split("=")[1].trim().replace("\"", "");
+    String[] name = n.split(" ");
+    Person author = new Person(name[0], name[1]);
+    String isbn = info[2].split("=")[1].trim().replace("\"", "");
+    String year = info[3].split("=")[1].trim().replace("\"", "").replace("{", "").replace("}", "");
+    return new Book(title, author, isbn, Integer.parseInt(year));
+}
 
-    /**
-     * Returns a string representation of a book
-     *
-     * @return A string representation of a book in
-     * the format "Book: Author=<{@link Person#toString()}>; ISBN=<ISBN>;Title=<title>"
-     */
     @Override
     public String toString() {
         return "Book: Author=<" + this.author.toString() + ">; ISBN=<" + this.isbn + ">; Title=<" + this.getTitle() + ">";

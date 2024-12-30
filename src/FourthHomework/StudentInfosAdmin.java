@@ -16,12 +16,14 @@ public class StudentInfosAdmin {
 
     // 添加学生方法，默认添加50个学生
     public void addStudents() {
-        for (int i = 0; i < 2; i++) {
-            Student student = new Student(nextId++);
-            students.add(student);
-        }
-        saveStudentsToFile();
+    for (int i = 0; i < 50; i++) {
+        String firstName = "Student" + (i + 1);
+        String lastName = "";
+        Student student = new Student(nextId++);
+        students.add(student);
     }
+    saveStudentsToFile();
+}
 
     // 更新学生成绩方法，根据学生ID更新Java、HTML和SQL成绩
     public void updateStudentScores(int id, int javaScore, int htmlScore, int sqlScore) {
